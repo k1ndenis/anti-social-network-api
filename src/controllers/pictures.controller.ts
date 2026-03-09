@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from "path";
 import { Picture } from "../types/picture";
 
-const filePath = path.join(__dirname, '..', 'data', 'pictures.json');
+const filePath = path.join(__dirname, '..', '..', 'data', 'pictures.json');
 
 export const getPictures = (req: Request, res: Response) => {
   fs.readFile(filePath, 'utf8', (err, data) => {

@@ -3,11 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import { Track } from './../types/track'
 
-const filePath = path.join(__dirname, '..', 'data', 'tracks.json');
+const filePath = path.join(__dirname, '..', '..', 'data', 'tracks.json');
 
 export const getTracks = (req: Request, res: Response) => {
   fs.readFile(filePath, 'utf8', (err, data) => {
-    if (err) return res.json([]);
+    if (err) return res.status(500).json({ error: "Read error" });
     res.json(JSON.parse(data || '[]'));
   })
 };
