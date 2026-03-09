@@ -2,7 +2,6 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import usersRoutes from './routes/users.routes';
 import musicRoutes from './routes/music.routes';
 import pictureRoutes from './routes/pictures.routes';
 
@@ -17,7 +16,6 @@ const PORT = process.env.PORT || 5000;
 app.get('/', (req: Request, res: Response) => {
   res.send("Server is running")
 })
-app.use('/api/users/auth', usersRoutes);
 app.use('/api/music', musicRoutes);
 app.use('/api/pictures', pictureRoutes);
 

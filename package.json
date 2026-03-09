@@ -7,27 +7,25 @@
   "author": "k1ndenis",
   "license": "ISC",
   "scripts": {
-  "dev": "nodemon src/index.ts",
-  "build": "tsc && cp -r data dist/data && cp -r public dist/public",
-  "start": "node dist/index.js"
-},
+    "dev": "nodemon src/index.ts",
+    "build": "tsc && cp -r data dist/data && cp -r public dist/public",
+    "start": "node dist/index.js"
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
+    "firebase-admin": "^13.7.0",
     "jsonwebtoken": "^9.0.3",
     "multer": "^2.1.1",
     "pg": "^8.20.0"
   },
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "nodemon": "^3.1.14",
-    "@types/node": "^25.3.5",
-    "@types/express": "^5.0.6",
     "@types/cors": "^2.8.19",
-    "@types/pg": "^8.18.0",
-    "@types/multer": "^2.1.0",
-    "@types/bcrypt": "^6.0.0"
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.5",
+    "nodemon": "^3.1.14",
+    "typescript": "^5.9.3"
   }
 }
