@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+node_modules/
+**/node_modules/
+
+dist/
+**/dist/
+dist-ssr
+*.local
+.tsbuildinfo
+**/tsconfig.tsbuildinfo
+
+.env
+.env.*
+**/ .env
+! .env.example
+
+.vscode/
+.idea/
+.DS_Store
