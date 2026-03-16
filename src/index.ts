@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import musicRoutes from './routes/music.routes';
 import pictureRoutes from './routes/pictures.routes';
 import commentRoutes from './routes/comments.routes'
+import likesRoutes from './routes/likes.routes';
 
 dotenv.config();
 
@@ -21,5 +22,6 @@ app.get('/', (req: Request, res: Response) => {
 app.use('/api/music', musicRoutes);
 app.use('/api/pictures', pictureRoutes);
 app.use('/api/comments', commentRoutes);
+app.use('/api/likes', likesRoutes);
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
